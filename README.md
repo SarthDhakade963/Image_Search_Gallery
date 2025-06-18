@@ -23,16 +23,16 @@ A simple and elegant image search web application using the [Pixabay API](https:
 
 ## 🛠️ How It Works
 - 🔍 Search Functionality
-User types a keyword in the input box and clicks "Search" or press Enter.
-App fetches images from Pixabay’s API and displays them.
-A "Show More" button fetches more results using pagination.
+  -User types a keyword in the input box and clicks "Search" or press Enter.
+  -App fetches images from Pixabay’s API and displays them.
+  -A "Show More" button fetches more results using pagination.
 
 - 🌗 Theme Toggle
-Button in top-right corner toggles between dark and light mode.
-User’s theme preference is saved using localStorage.
+  -Button in top-right corner toggles between dark and light mode.
+  -User’s theme preference is saved using localStorage.
 
 - 🖱️ Image Click Behavior
-Clicking an image opens the full version in a new tab.
-User can right-click to download, or modify code to auto-download.
+  -Clicking an image opens the full version in a new tab.
+  -User can right-click to download, or modify code to auto-download.
 
 
