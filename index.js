@@ -3,6 +3,26 @@ const searchResult = document.querySelector("#search-box");
 const searchBtn = document.querySelector(".searchBtn");
 const showMoreBtn = document.querySelector(".showMoreBtn");
 const showResult = document.querySelector(".showResult");
+const themeToggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
+
+// Load saved theme on page load
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-theme");
+  themeToggleBtn.textContent = "☀️ Light Mode";
+}
+
+themeToggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-theme");
+
+  if (body.classList.contains("dark-theme")) {
+    themeToggleBtn.textContent = "☀️ Light Mode";
+    localStorage.getItem("theme", "dark");
+  } else {
+    themeToggleBtn.textContent = "🌙 Dark Mode";
+    localStorage.getItem("theme", "light");
+  }
+});
 
 let keyword = "";
 let page = 1;
@@ -30,14 +50,14 @@ async function fetchImage() {
   const data = await response.json();
 
   if (page === 1) {
-    showResult.innerHTML = ""; 
+    showResult.innerHTML = "";
   }
 
   data.hits.forEach((image) => {
     const link = document.createElement("a");
     link.href = image.largeImageURL;
-    link.target = "_blank"; 
-    link.download = ""; 
+    link.target = "_blank";
+    link.download = "";
 
     const img = document.createElement("img");
     img.src = image.webformatURL;
