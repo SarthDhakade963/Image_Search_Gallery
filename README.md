@@ -3,6 +3,17 @@
 A simple and elegant image search web application using the [Pixabay API](https://pixabay.com/api/). This app allows users to search for high-quality photos, view them in fullscreen, download them and toggle between dark and light themes.
 
 ---
+## 🌐 Live Demo
+
+[🔗 View Live Website](https://sarthdhakade963.github.io/Image_Search_Gallery/) 
+
+---
+
+## 📸 Preview
+
+![Image_Search_Gallery_Screenshot](./screenshot.png)
+
+---
 
 ## 🔥 Features
 
